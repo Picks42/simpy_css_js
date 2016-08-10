@@ -70,12 +70,16 @@ $(document).ready(function () {
         $(".mobile_drawer").toggleClass("active");
         $("body").toggleClass("overflow_hidden");
         $("html").toggleClass("overflow_hidden");
+        $("nav").toggleClass("nav_fixed");
         
     }
     $(document).on('click', ".menu_wrapper .close_btn", function () {//mobile menu toggle
         mobile_drawer_action();
     });
-    $(document).on('click', ".mobile_drawer .drawer_close", function () {//mobile menu toggle
+        $(document).on('click',".mobile_drawer .drawer_close", function () {//mobile menu toggle
+        mobile_drawer_action();
+    });
+    $(document).on('click','.mainContent.deactive',function (){
         mobile_drawer_action();
     });
     $(".hover_effect").attr("data-hover", "true");
