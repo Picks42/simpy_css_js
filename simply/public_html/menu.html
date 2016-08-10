@@ -4,58 +4,125 @@ To change this license header, choose License Headers in Project Properties.
 To change this template file, choose Tools | Templates
 and open the template in the editor.
 -->
+
+<!--
+----------------Documentation Section-----------------------------------------------
+Format:
+<div class="mainContent"> (Must need this type of format with the same classes names)
+        <nav> 
+            <div class="menu_wrapper">
+                <div class="main_menu menu_left">
+                    <ul class="main_ul">
+                        <li class="active"><a href="dashboard.php">Menu</a></li>
+                            .
+                            .
+                            .
+                            .
+                        <li><a></a></li>
+                    </ul>
+                </div>
+                <div class="brand_name"> // class name fixed
+                    <img src="images/logo.png">// you need to maintain image size for better output
+                </div>
+            </div>
+        </nav>
+        </div>
+Options:
+1.Right side mobile menu
+<div class="mainContent mobile_right">...</div>
+
+2.Fix navigation 
+<nav class="nav_fixed">...</nav>
+
+3.Menu  alignment
+ <div class="main_menu menu_left">....</div>
+class="main_menu menu_center" - for center align 
+class="main_menu menu_right" - for right align 
+
+4.Create a click drop down
+    note: it must be part of main menu's li
+    format:
+<ul class="main_ul">
+    <li>
+            <a> Install Code</a>
+                            <ul class="drop_down_click">  // sub-menu on click
+                                <li><a href="">...</a></li>
+                            </ul>
+                        </li>
+</ul>
+
+5.Create a hover drop-down
+<ul class="main_ul">
+    <li>
+            <a> Install Code</a>
+                            <ul class="drop_down_hover">  // sub-menu on hover
+                                <li><a href="">...</a></li>
+                            </ul>
+                        </li>
+</ul>
+
+6.text as a brand name
+You can also use text as a brand name but at some points you have to change mobile,
+drawer opener icon's padding accroding to the line height of your brand name's text.
+
+-------------end of documentation section---------------------------------------
+-->
+
+
 <html>
     <head>
         <title>TODO supply a title</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
         <link href="css/simply.css" type="text/css" rel="stylesheet">
         <link href="css/style.css" rel="stylesheet" type="text/css"/>
+        <style>
+            .mainContent{
+                height: 2000px;
+            }
+        </style>
     </head>
     <body>
-        <div class="mainContent">
-        <nav class="nav_fixed"> 
-            <div class="menu_wrapper">
-                <div class="brand_name">
-                    <img src="images/logo.png">
-                </div>
-                <div class="main_menu menu_center">
-                    <ul class="main_ul">
-                        <li class="active"><a href="dashboard.php"><i class="fa fa-tachometer fa-lg "></i>Dashboard</a></li>
-                        <li><a href="manageImages.php"><i class="fa fa-users fa-lg "></i>Customer Images</a></li>
-                        <li><a href="mailer.php"><i class="fa fa-envelope fa-lg "></i>Mail Settings</a></li>
-                        <li><a href="manageProduct.php"><i class="fa fa-envelope fa-lg "></i>Manage Product</a></li>
-                        <li><a href="manageProduct.php"><i class="fa fa-envelope fa-lg "></i>Manage Product</a></li>
-                        <li><a href="manageProduct.php"><i class="fa fa-envelope fa-lg "></i>Manage Product</a></li>
-                        <li><a href="manageProduct.php"><i class="fa fa-envelope fa-lg "></i>Manage Product</a></li>
-                        <li><a href="manageProduct.php"><i class="fa fa-envelope fa-lg "></i>Manage Product</a></li>
-                        <li><a><i class="fa fa-download fa-lg "></i> Install Code</a>
-                            <ul class="drop_down_click">
-                                <li><a href="">Test</a></li>
-                                <li><a href="">Test 2</a></li>
-                                <li><a href="">Test 3</a></li>
-                                <li><a href="">Test 4</a></li>
-                            </ul>
-                        </li>
-                        <li>
-                            <a><i class="fa fa-hand-pointer-o "></i> Store
-                                <span class="caret "></span>
-                            </a>
-                            <ul class="drop_down_hover">
-                                <li><a href="https://lucentinnovationtest1.myshopify.com" target="_blank"><i class="fa fa-shopping-cart  pulse fa-lg "></i> &nbsp;Store</a></li>
-                                <li><a href="https://lucentinnovationtest1.myshopify.com/admin" target="_blank"><i class="fa fa-tachometer  pulse fa-lg "></i> &nbsp;Store Admin</a></li>
-                            </ul>
-                        </li>
-                        <li><a href="logout.php"><i class="fa fa-sign-out  fa-lg"></i>Logout</a></li>
-                    </ul>
-                </div>
+        <div class="mainContent ">
+            <nav class="nav_fixed"> 
+                <div class="menu_wrapper">
+                    <div class="main_menu menu_left">
+                        <ul class="main_ul">
+                            <li class="active"><a href="dashboard.php"><i class="fa fa-tachometer fa-lg "></i>Dashboard</a></li>
+                            <li><a href="manageImages.php"><i class="fa fa-users fa-lg "></i>Customer Images</a></li>
+                            <li><a href="manageProduct.php"><i class="fa fa-envelope fa-lg "></i>Manage Product</a></li>
+                            <li><a href="manageProduct.php"><i class="fa fa-envelope fa-lg "></i>Manage Product</a></li>
+                            <li><a href="manageProduct.php"><i class="fa fa-envelope fa-lg "></i>Manage Product</a></li>
+                            <li><a><i class="fa fa-download fa-lg "></i> Install Code</a>
+                                <ul class="drop_down_click">
+                                    <li><a href="">Test</a></li>
+                                    <li><a href="">Test 2</a></li>
+                                    <li><a href="">Test 3</a></li>
+                                    <li><a href="">Test 4</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a><i class="fa fa-hand-pointer-o "></i> Store
+                                    <span class="caret "></span>
+                                </a>
+                                <ul class="drop_down_hover">
+                                    <li><a href="https://lucentinnovationtest1.myshopify.com" target="_blank"><i class="fa fa-shopping-cart  pulse fa-lg "></i> &nbsp;Store</a></li>
+                                    <li><a href="https://lucentinnovationtest1.myshopify.com/admin" target="_blank"><i class="fa fa-tachometer  pulse fa-lg "></i> &nbsp;Store Admin</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="logout.php"><i class="fa fa-sign-out  fa-lg"></i>Logout</a></li>
+                        </ul>
+                    </div>
+                    <div class="brand_name">
+                        <a href><img src="images/logo.png"></a>
+                    </div>
 
-            </div>
-        </nav>
-            
+
+                </div>
+            </nav>
+
         </div>
         <script src="js/jquery_v2.1.4.js"></script>
-        <script src="js/simply.js"></script>
+        <script src="js/simply-navbar.js"></script>
     </body>
 </html>
